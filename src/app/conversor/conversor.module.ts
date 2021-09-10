@@ -3,13 +3,21 @@ import { CommonModule } from '@angular/common';
 
 import { ConversorComponent } from './conversor';
 import { MoedaService, ConversorService } from './services';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NumeroDirective } from './directives';
+import { ModalCotacaoComponent } from './utils';
+import { DataBrPipe } from './pipes/data-br.pipe';
+
 
 
 
 @NgModule({
-  declarations: [ConversorComponent],
+  declarations: [ConversorComponent, NumeroDirective, ModalCotacaoComponent, DataBrPipe],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule,
+    FormsModule
   ],
   exports: [
     ConversorComponent
